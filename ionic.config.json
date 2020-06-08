@@ -1,0 +1,7 @@
+{
+  "name": "tamil_asia",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
