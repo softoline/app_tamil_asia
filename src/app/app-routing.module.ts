@@ -4,8 +4,16 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  },  {
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+
+
+  {
     path: 'home',
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
@@ -20,7 +28,22 @@ const routes: Routes = [
   {
     path: 'business',
     loadChildren: () => import('./pages/business/business.module').then( m => m.BusinessPageModule)
-  }
+  },
+  {
+    path: 'post',
+    loadChildren: () => import('./pages/single-post/single-post.module').then( m => m.SinglePostPageModule)
+  },
+  {
+    path: 'post/:id',
+    loadChildren: () => import('./pages/single-post/single-post.module').then( m => m.SinglePostPageModule)
+  },
+
+
+  {
+    path: 'menu',
+    loadChildren: () => import('./pages/menu/menu.module').then( m => m.MenuPageModule)
+  },
+ 
 
 ];
 @NgModule({

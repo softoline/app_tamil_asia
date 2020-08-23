@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>singlePost</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="https://www.w3schools.com/howto/img_avatar.png">
+      </ion-avatar>
+      <h2>Marty McFly</h2>
+      <p>November 5, 1955</p>
+    </ion-item>
+  
+    <img src="https://s3.amazonaws.com/ffe-ugc/avatar/assets/00692962-426c-11e7-883d-000d3a3122f5.jpg?v=2">
+  
+    <ion-card-content>
+      <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+    </ion-card-content>
+  
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-start clear small>
+          <ion-icon name="thumbs-up"></ion-icon>
+          <div>12 Likes</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-start clear small>
+          <ion-icon name="text"></ion-icon>
+          <div>4 Comments</div>
+        </button>
+      </ion-col>
+      <ion-col align-self-center text-center>
+        <ion-note>
+          11h ago
+        </ion-note>
+      </ion-col>
+    </ion-row>
+  
+  </ion-card>
+</ion-content>
+<!-- 
+<ion-content>
+  <ion-item>
+    <ion-label position="stacked">Title</ion-label>
+    <ion-input [(ngModel)]="post.title"></ion-input>
+  </ion-item>
+ 
+  <ion-item>
+    <ion-label position="stacked">Notes</ion-label>
+    <ion-textarea [(ngModel)]="post.description" rows="8"></ion-textarea>
+  </ion-item>
+
+  <ion-footer *ngIf="!post.id">
+    <ion-toolbar color="success">
+      <ion-button expand="full" fill="clear" color="light" (click)="addPost()">
+        <ion-icon name="checkmark" slot="start"></ion-icon>
+        Add Post
+      </ion-button>
+    </ion-toolbar>
+  </ion-footer>
+   
+  <ion-footer *ngIf="post.id">
+    <ion-row no-padding text-center>
+      <ion-col size="6">
+        <ion-button expand="block" fill="outline" color="danger" (click)="deletePost()">
+          <ion-icon name="trash" slot="start"></ion-icon>
+          Delete
+        </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button expand="block" fill="solid" color="success" (click)="updatePost()">
+          <ion-icon name="save" slot="start"></ion-icon>
+          Update
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-footer>
+
+</ion-content>
+-->
+
