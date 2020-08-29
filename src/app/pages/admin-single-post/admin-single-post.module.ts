@@ -1,21 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { User} from '../../models/user';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AccountPageRoutingModule } from './account-routing.module';
+import { AdminSinglePostPageRoutingModule } from './admin-single-post-routing.module';
 
-import { AccountPage } from './account.page';
+import { AdminSinglePostPage } from './admin-single-post.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AccountPageRoutingModule
+    AdminSinglePostPageRoutingModule
   ],
-  declarations: [AccountPage]
+  declarations: [AdminSinglePostPage]
 })
-export class AccountPageModule {}
+export class AdminSinglePostPageModule {}

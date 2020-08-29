@@ -19,6 +19,12 @@ export class MenuPage implements OnInit {
       name: 'Register',
       path: '/menu/register'
     },
+      {
+        name: 'my posts',
+        path: '/menu/admin-dashboard'
+      },
+    
+  
 
 
   ]

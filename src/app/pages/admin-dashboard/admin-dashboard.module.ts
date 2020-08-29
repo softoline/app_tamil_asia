@@ -1,21 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { User} from '../../models/user';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AccountPageRoutingModule } from './account-routing.module';
+import { AdminDashboardPageRoutingModule } from './admin-dashboard-routing.module';
 
-import { AccountPage } from './account.page';
+import { AdminDashboardPage } from './admin-dashboard.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AccountPageRoutingModule
+    AdminDashboardPageRoutingModule
   ],
-  declarations: [AccountPage]
+  declarations: [AdminDashboardPage]
 })
-export class AccountPageModule {}
+export class AdminDashboardPageModule {}

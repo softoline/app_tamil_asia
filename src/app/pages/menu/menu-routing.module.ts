@@ -11,8 +11,15 @@ const routes: Routes = [
       {
         path: 'tabmenu',
         loadChildren: () => import('../tabmenu/tabmenu.module').then( m => m.TabmenuPageModule)
+    }, 
+    {
+      path: 'register',
+      loadChildren: () => import('../register/register-routing.module').then( m => m.RegisterPageRoutingModule)
     },
-   
+    {
+      path: 'admin-dashboard',
+      loadChildren: () => import('../admin-dashboard/admin-dashboard-routing.module').then( m => m.AdminDashboardPageRoutingModule)
+    }
       
     ]
   }

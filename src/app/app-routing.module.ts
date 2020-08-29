@@ -43,6 +43,29 @@ const routes: Routes = [
     path: 'menu',
     loadChildren: () => import('./pages/menu/menu.module').then( m => m.MenuPageModule)
   },
+  {
+    path: 'verify-email',
+    loadChildren: () => import('./pages/verify-email/verify-email.module').then( m => m.VerifyEmailPageModule)
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./pages/dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
+  {
+    path: 'admin-dashboard',
+    loadChildren: () => import('./pages/admin-dashboard/admin-dashboard.module').then( m => m.AdminDashboardPageModule)
+  },
+  {
+    path: 'admin-single-post',
+    loadChildren: () => import('./pages/admin-single-post/admin-single-post.module').then( m => m.AdminSinglePostPageModule)
+  },
+  {
+    path: 'admin-single-post/:id',
+    loadChildren: () => import('./pages/admin-single-post/admin-single-post.module').then( m => m.AdminSinglePostPageModule)
+  },
+ 
+ 
+
  
 
 ];

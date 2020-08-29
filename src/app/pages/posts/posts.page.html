@@ -7,34 +7,35 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
   <!-- Searchbar with cancel button shown on focus -->
-<ion-searchbar showCancelButton="focus"></ion-searchbar>
-
-  <ion-list>
+<ion-searchbar  placeholder="Type Item Name">
+</ion-searchbar>
+<ion-list>
+    <!-- list -->
     <ion-item button [routerLink]="['/post', post.id]" *ngFor="let post of (posts | async)">
-      <ion-thumbnail  item-left>
-        <img src="https://s3.amazonaws.com/ffe-ugc/avatar/assets/00692962-426c-11e7-883d-000d3a3122f5.jpg?v=2" />
-      </ion-thumbnail>
-      {{ post.title }}
+        <!-- item -->
+        <ion-row class="catagory">
+            <!-- row -->
+            <ion-col col-6>
+                <!-- col with 50  width -->
+                <img src="https://s3.amazonaws.com/ffe-ugc/avatar/assets/00692962-426c-11e7-883d-000d3a3122f5.jpg?v=2" alt="foodname" />
+            </ion-col>
+            <ion-col col-6>
+                <!-- col with 50% width -->
+                <p class="item-name">{{post.title}}</p>
+                <p class="item-detail" text-wrap>
+                    <span>{{post.description}}</span>
+                </p>
+                <div class="product-rating">
+                    <!-- rating -->
+                  
+                </div>
+            </ion-col>
+        </ion-row>
+        <!--end row -->
     </ion-item>
-  </ion-list>
+    <!-- item -->
+</ion-list>
 </ion-content>
 
-<!--
-
-<ion-content>
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button routerLink="/post">
-      <ion-icon name="add"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
-
-  <ion-list>
-<ion-item  *ngFor="let post of (posts | async)">
-      {{ post.id }}
-    </ion-item>
-  </ion-list>
-</ion-content>
-
--->
