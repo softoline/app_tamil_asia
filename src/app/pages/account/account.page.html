@@ -1,9 +1,40 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>account</ion-title>
+  <ion-toolbar>   
+        <ion-buttons slot="start">
+          <ion-menu-button autoHide="false"></ion-menu-button>
+        </ion-buttons>
+        My Account
+    <ion-title>&nbsp;</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content fullscreen="true" slot="fixed" > 
+<div class="card">
+  <div class="header">
+    <div class="avatar">
+      <img src="https://sainik.telangana.gov.in/images/rswo-profilepic.png" alt="">
+    </div>
+  </div>
+</div>
+<div class="card-body">
+  <div class="user-meta ion-text-center">
+    <h3 class="playername">Roger Federer</h3>
+    <h5 class="country">Switzerland</h5>
+    <h6 class="ranking">Current ranking: <ion-chip>
+      <ion-label>2</ion-label>
+      </ion-chip>
+    </h6>
+  </div>
+  <ion-button expand="full" color="primary">http://rogerfederer.com</ion-button>
+  <ion-button expand="full" color="secondary">@RogerFederer on Twitter</ion-button>
+  <ion-button expand="full" color="secondary">View profile at ATP</ion-button>
 
-</ion-content>
+   <!-- fab placed to the top end -->
+   <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button  routerLink="/admin-dashboard">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</div>
+
+

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { User} from '../../models/user';
 
 import { IonicModule } from '@ionic/angular';
 

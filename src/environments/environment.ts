@@ -3,7 +3,18 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyAbInt6Qu6FE1kwFOUl5YRO4YfouZlSkTw",
+    authDomain: "app-tamila.firebaseapp.com",
+    databaseURL: "https://app-tamila.firebaseio.com",
+    projectId: "app-tamila",
+    storageBucket: "app-tamila.appspot.com",
+    messagingSenderId: "545077044305",
+    appId: "1:545077044305:web:9118cae24b79f361468470",
+    measurementId: "G-LZJKFZHZPH"
+  }
+  
 };
 
 /*
