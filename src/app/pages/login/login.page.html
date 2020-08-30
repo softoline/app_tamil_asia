@@ -10,26 +10,6 @@
 
 <ion-content class="ion-padding">
   <img class="logo" src="https://sainik.telangana.gov.in/images/rswo-profilepic.png">
-  <!--
-  <form>    
-    <ion-item lines="full">
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" #email required></ion-input>
-    </ion-item> 
-
-    <ion-item lines="full">
-      <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" #password required></ion-input>
-    </ion-item>
-
-    <ion-row>
-      <ion-col> 
-      <ion-button type="submit" (click)="logIn(email, password)"  routerLink="/menu/tabmenu" expand="block">Login</ion-button>
-      </ion-col>
-    </ion-row>
-  </form>
--->
-  
 
     <form class="form" [formGroup]="validations_form" (ngSubmit)="loginUser(validations_form.value)">
       <ion-row>

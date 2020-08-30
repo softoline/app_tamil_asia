@@ -5,6 +5,7 @@ import { RouteReuseStrategy } from '@angular/router';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { AgmCoreModule } from '@agm/core';
 
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule} from '@angular/forms';
@@ -33,7 +34,10 @@ import { SETTINGS } from '@angular/fire/firestore';
   AngularFireDatabaseModule,
   AngularFireStorageModule,
   FormsModule,
-  ReactiveFormsModule
+  ReactiveFormsModule,
+  AgmCoreModule.forRoot({
+    apiKey: 'AIzaSyDpRAGOhdOQpRe4XPBdFEeVDwSy-ebrl-g',
+    }),
 
 
     ],

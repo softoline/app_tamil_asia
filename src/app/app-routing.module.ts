@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './services/auth-guard.service';
 
 const routes: Routes = [
   {
@@ -53,16 +54,25 @@ const routes: Routes = [
   },
   {
     path: 'admin-dashboard',
-    loadChildren: () => import('./pages/admin-dashboard/admin-dashboard.module').then( m => m.AdminDashboardPageModule)
+    loadChildren: () => import('./pages/admin-dashboard/admin-dashboard.module').then( m => m.AdminDashboardPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'admin-single-post',
-    loadChildren: () => import('./pages/admin-single-post/admin-single-post.module').then( m => m.AdminSinglePostPageModule)
+    loadChildren: () => import('./pages/admin-single-post/admin-single-post.module').then( m => m.AdminSinglePostPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'admin-single-post/:id',
-    loadChildren: () => import('./pages/admin-single-post/admin-single-post.module').then( m => m.AdminSinglePostPageModule)
+    loadChildren: () => import('./pages/admin-single-post/admin-single-post.module').then( m => m.AdminSinglePostPageModule),
+    canActivate: [AuthGuard]
   },
+  {
+    path: 'location-finder',
+    loadChildren: () => import('./pages/location-finder/location-finder.module').then( m => m.LocationFinderPageModule),
+    
+  },
+
  
  
 
