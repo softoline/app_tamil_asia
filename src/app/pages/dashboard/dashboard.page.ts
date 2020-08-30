@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from "../../services/authentication.service";
 import { NavController } from '@ionic/angular';
+import { Router, RouterEvent } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,7 +12,8 @@ export class DashboardPage implements OnInit {
   userEmail: string;
 
   constructor(public authService: AuthenticationService,
-    private navCtrl: NavController,) { }
+    private navCtrl: NavController,
+    private router: Router,) { }
 
   ngOnInit() {
     this.authService.userDetails().subscribe(res => {
@@ -26,15 +28,9 @@ export class DashboardPage implements OnInit {
     })
   }
 
-  logout() {
-    this.authService.logoutUser()
-      .then(res => {
-        console.log(res);
-        this.navCtrl.navigateBack('');
-      })
-      .catch(error => {
-        console.log(error);
-      })
+  navigateHome() {
+    this.router.navigate(['tabmenu']);
   }
+
 
 }

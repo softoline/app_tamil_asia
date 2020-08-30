@@ -140,4 +140,6 @@ export class AuthenticationService {
     return this.ngFireAuth.user
   }
 
+
+
 }

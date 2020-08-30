@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterEvent } from '@angular/router';
+import { AuthenticationService } from "../../services/authentication.service";
+import { NavController } from '@ionic/angular';
+
+
 
 @Component({
   selector: 'app-menu',
@@ -7,37 +11,44 @@ import { Router, RouterEvent } from '@angular/router';
   styleUrls: ['./menu.page.scss'],
 })
 export class MenuPage implements OnInit {
-
+  userEmail: string;
+  isLookedOut: boolean;
+  isLookedIn: boolean;
   activePath = '';
-
   pages = [
     {
-      name: 'tabmenu',
-      path: '/menu/tabmenu'
+      name: 'Home',
+      path: '/menu/tabmenu',
+      icon: 'home'
     },
-    {
-      name: 'Register',
-      path: '/menu/register'
-    },
-      {
-        name: 'my posts',
-        path: '/menu/admin-dashboard'
-      },
     
-  
-
 
   ]
 
-  constructor(private router: Router) {
+  constructor(private router: Router,
+    public authService: AuthenticationService,
+    private navCtrl: NavController) {
     this.router.events.subscribe((event: RouterEvent) => {
+      this.isLookedIn = this.authService.isLoggedIn;
+      this.isLookedOut = !this.authService.isLoggedIn;
       this.activePath = event.url
     })
   }
 
  
 
-  ngOnInit() {
+  ngOnInit() { 
+  
   }
 
+  logout() {
+    this.authService.logoutUser()
+      .then(res => {
+        console.log(res);      
+        this.navCtrl.navigateBack('');
+      })
+      .catch(error => {
+        console.log(error);
+      })
+  }
 }

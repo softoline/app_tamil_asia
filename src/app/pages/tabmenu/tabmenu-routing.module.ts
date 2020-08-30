@@ -15,7 +15,7 @@ const routes: Routes = [
       loadChildren: () => import('../posts/posts.module').then( m => m.PostsPageModule)
     },
     {path: 'shops',
-      loadChildren: () => import('../business/business.module').then( m => m.BusinessPageModule)
+      loadChildren: () => import('../location-finder/location-finder.module').then( m => m.LocationFinderPageModule)
     },
     {path: 'account',
       loadChildren: () => import('../account/account.module').then( m => m.AccountPageModule)

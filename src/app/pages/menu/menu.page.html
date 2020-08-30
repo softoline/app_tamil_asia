@@ -10,14 +10,25 @@
     <ion-list>
       <ion-menu-toggle auto-hide="false" *ngFor="let page of pages">
         <ion-item [routerDirection]="'root'" [routerLink]="[page.path]">
+          <ion-icon  name="{{page.icon}}"  slot="start"></ion-icon>
           <ion-label>
             {{page.name}}
           </ion-label>
         </ion-item>
       </ion-menu-toggle>
 
-      <ion-item tappable routerLink="/login" [routerDirection]="'root'" >
-<ion-icon name="log-out" slot="start"> Logout</ion-icon>
+      <ion-item *ngIf="!this.isLookedIn"  tappable routerLink="/login" [routerDirection]="'root'"> 
+        <ion-icon  name="log-in"  slot="start"></ion-icon>
+        Login
+      </ion-item> 
+
+      <ion-item *ngIf="!this.isLookedIn" routerLink="/menu/register" [routerDirection]="'root'">
+        <ion-icon  name="person-add-outline" slot="start"></ion-icon>
+         Register
+      </ion-item> 
+
+      <ion-item *ngIf="this.isLookedIn" [routerDirection]="'root'" (click)="logout()">
+      <ion-icon  name="log-out"  slot="start"></ion-icon> Logout
       </ion-item> 
     </ion-list>
   </ion-content>
